@@ -49,7 +49,7 @@ app.get('/signUp',(req,res)=>{
 
 
 app.post('/login',(req,res)=>{
-    usermodel.find({password:req.params.password, email:req.params.email})
+    usermodel.findOne({password:req.params.password, email:req.params.email})
     .then(data=>{
         console.log(data);
         if(data){
