@@ -24,7 +24,7 @@ app.use((req,res,next)=>{
 })
 app.all('/',(req,res)=>{return res.send({status:true,message:'Hey There all , Api has been setup'});})
 
-app.post('/postData',(req,res)=>{
+app.get('/signUp',(req,res)=>{
     console.log(req.params);
         if(req.params){
             if(!trimAndCheck(req.params.name))
